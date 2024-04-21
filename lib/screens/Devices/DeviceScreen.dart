@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class DevicesScreen extends StatefulWidget {
   const DevicesScreen({super.key});
-  
+
   static const String screenName = "devices";
   static const screenPath = "/devices";
 

@@ -1,6 +1,7 @@
 import 'package:asset_management_app/Router/MyRouterConfig.dart';
 import 'package:asset_management_app/Sidebar/CustomDesktopSideBar.dart';
 import 'package:asset_management_app/provider/authProvider.dart';
+import 'package:asset_management_app/provider/memberProvider.dart';
 import 'package:asset_management_app/screens/Dashboard/DashBoardScreen.dart';
 import 'package:asset_management_app/screens/Devices/DeviceScreen.dart';
 import 'package:asset_management_app/screens/Settings/SettingsScreen.dart';
@@ -43,7 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_)=> AuthProvider())
+        ChangeNotifierProvider(create: (_)=> AuthProvider()),
+        ChangeNotifierProvider(create: (_) => MemberProvider())
       ],
       child: Scaffold(
         body: Row(
